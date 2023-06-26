@@ -1,0 +1,17 @@
+version: '3'
+services:
+  meu-app-java:
+    build:
+      context: .
+      dockerfile: Dockerfile.java
+    ports:
+      - 8080:80
+    restart: unless-stopped
+
+  csharp-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.csharp
+    ports:
+      - 5000:80
+    restart: unless-stopped
